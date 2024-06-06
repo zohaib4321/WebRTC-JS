@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>👍WebRTC Room</title>
+		<link rel="stylesheet" href="room.css" />
+	</head>
+	<body>
+		<div class="container">
+			<div class="form-container">
+        <h1>Video Calling App</h1>
+				<form onsubmit="joinRoom(); return false">
+					<input type="text" placeholder="Enter room name" id="invite-link"/>
+					<button type="submit">Join Room</button>
+				</form>
+			</div>
+		</div>
+    <script>
+      function joinRoom() {
+        const inviteCode = document.getElementById("invite-link").value
+        console.log(inviteCode);
+
+        window.location =  `index.html?room=${inviteCode}`
+      }
+    </script>
+	</body>
+</html>
