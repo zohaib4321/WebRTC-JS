@@ -7,7 +7,7 @@
   font-family: "Archivo", sans-serif;
 }
 
-.container {
+.main {
   height: 100dvh;
   width: 100vw;
   background-color: #212328;
@@ -18,10 +18,14 @@
 }
 
 h1 {
+  position: absolute;
+  width: 100vw;
   font-size: 1.875rem;
   line-height: 2.25rem;
   color: #fff;
   font-weight: 700;
+  top: 5rem;
+  text-align: center;
 }
 
 h3 {
@@ -33,6 +37,7 @@ h3 {
 
 form {
   width: 50%;
+  max-width: 50rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -41,7 +46,6 @@ form {
   gap: 1.25rem;
   border: 1px solid #2e333d;
   border-radius: 1rem;
-  margin-top: 2.5rem;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
 
@@ -71,14 +75,15 @@ button {
   font-size: 1rem;
   border-radius: 40px;
   outline: #fff;
-  border: 1px solid gray;
+  border: none;
+  outline: none;
 }
 
 button:hover {
   background-color: rgb(82, 110, 212);
 }
 
-@media (min-width: 320px) and (max-width: 576px) {
+@media (min-width: 320px) and (max-width: 676px) {
   form {
     width: 95%;
   }
